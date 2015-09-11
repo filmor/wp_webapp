@@ -1,0 +1,19 @@
+ <ul class="table-view">
+% for entry in entrys:
+  <li class="table-view-cell media">
+    <a href="/article/{{entry["ID"]}}" class="navigate-right" data-transition="slide-in">
+      <img class="media-object pull-left" width="75px" src="{{entry["thumb"]}}">
+      <div class="media-body">
+        {{!entry["title"]}}
+        
+        <p>Von {{entry["author"]["name"]}} in 
+				% for cat in entry["category"]:
+					<span style="background: #{{cat[2]}}; color: white;" class="badge">{{cat[0]}}</span>
+				% end
+				</p>
+      </div>
+    </a>
+  </li>
+% end
+
+</ul>
