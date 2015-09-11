@@ -1,5 +1,16 @@
+#! /usr/bin/python
+# coding: utf-8
+
 """
 	Connect to https://wordpress.org/plugins/json-api/
+	
+	Wordpress WebApp
+	(gpl v3) by Tobias Sauer
+    http://tobi.leichtdio.de
+    part of
+        - Dreifach Glauben : http://dreifachglauben.de
+        - Leichtdio.de : http://leichtdio.de
+    tobias [at] leichtdio . de
 """
 
 import requests

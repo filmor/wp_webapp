@@ -5,9 +5,14 @@
 	Wordpress WebApp using bottle.py
 	and JSON Api ( https://wordpress.org/plugins/rest-api/ )
 	
-	
+    (gpl v3) by Tobias Sauer
+    http://tobi.leichtdio.de
+    part of
+        - Dreifach Glauben : http://dreifachglauben.de
+        - Leichtdio.de : http://leichtdio.de
+    tobias [at] leichtdio . de
 """
-
+	
 from bottle import route, run, template, error, static_file, debug
 import json
 import connector
@@ -75,4 +80,5 @@ def blogwebapp():
 
 
 debug(True)
+### Add your Ip to test with a mobiledevice
 run(host='192.168.1.162', port=8000, debug=False, reloader=True)
