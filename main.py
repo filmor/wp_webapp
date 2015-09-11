@@ -15,7 +15,13 @@
 	
 from bottle import route, run, template, error, static_file, debug
 import json
+
+import os.path
+
 import connector
+
+
+pointer = connector.Connector()
 
 
 @route('/css/<css>')
@@ -44,8 +50,7 @@ def error404(error):
 
 @route('/article/<article_id>')
 def article(article_id):
-	debug = connector.Connector()
-	postdata = debug.get_post(int(article_id))
+	postdata = pointer.get_post(int(article_id))
 	config = json.load(file("config.json", "r"))
 	attrb = {"meta" : config["meta"],
 			 "social" : config["social"],
@@ -61,21 +66,23 @@ def article(article_id):
 def update(passwd):
 	config = json.load(file("config.json", "r"))
 	if passwd == config["pingpasswd"]:
-		debug = connector.Connector()
-		debug.ping()
+		
+		pointer.ping()
 		return "Done."
 	return "None."
 
 @route('/')
 def blogwebapp():
+	if not os.path.isfile("posts.json"):
+		pointer.ping()
+	
 	config = json.load(file("config.json", "r"))
 	attrb = {"meta" : config["meta"],
 			 "social" : config["social"],
 			 "sharelinks" : config["sharelinks"],
 			 "url" : config["meta"]["url"],
 	}
-	debug = connector.Connector()
-	attrb["entrys"] = debug.get_all_post()
+	attrb["entrys"] = pointer.get_all_post()
 	return template("blog_rachet.html", attrb)
 
 
