@@ -1,4 +1,4 @@
-# wp_webapp
+# Wordpress WebApp
 Wordpress WebApp build on bottlepy
 
 Baut eine Mobile-optimierte Oberfläche für Wordpress Seiten auf Basis der Wordpress API
