@@ -1,0 +1,44 @@
+{
+	"meta" : {
+		"name" : "Dreifach Glauben",
+		"description" : "auf der Suche",
+		"url" : "http://dreifachglauben.de",
+		"api" : "http://dreifachglauben.de/wp-json"
+	},
+	
+	"pingpasswd" : "pingeling",
+	
+	"social" : [
+		["Twitter", "http://www.twitter.com/dreifachglauben"],
+		["Facebook", "http://facebook.com/dreifachglauben"],
+		["Instagram", "http://instagram.com/dreifachglauben"]
+	],
+	
+	"category" : {
+		"highest" : 17,
+		"1" : "1abc9c",
+		"2" : "2ecc71",
+		"3" : "3498db",
+		"4" : "9b59b6",
+		"5" : "34495e",
+		"6" : "16a085",
+		"7" : "27ae60",
+		"8" : "2980b9",
+		"9" : "8e44ad",
+		"10" : "2c3e50",
+		"11" : "f1c40f",
+		"12" : "e67e22",
+		"13" : "e74c3c",
+    	"14" : "f39c12",
+		"15" : "d35400",
+		"16" : "c0392b",
+		"17" : "7f8c8d"
+	},
+	
+	"sharelinks" : {
+		"Facebook" : "https://www.facebook.com/sharer/sharer.php?u=",
+		"Google+" : "https://plus.google.com/share?url=",
+		"Twitter" : "https://twitter.com/home?status=",
+		"WhatsApp" : "whatsapp://send?text="
+	}
+}
